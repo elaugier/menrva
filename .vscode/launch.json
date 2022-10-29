@@ -1,0 +1,33 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "frontend",
+            "request": "launch",
+            "runtimeArgs": [
+                "start"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",
+            "cwd": "${workspaceFolder}/menrva-front"
+        },
+        {
+            "name": "backend",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "main:app"
+            ],
+            "cwd": "${workspaceFolder}/menrva-back",
+            "jinja": true,
+            "justMyCode": true
+        }
+    ]
+}
