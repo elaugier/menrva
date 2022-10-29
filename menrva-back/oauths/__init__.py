@@ -3,6 +3,6 @@ from fastapi import APIRouter
 oauthsRouter = APIRouter()
 
 
-@oauthsRouter.route(path="/authorize", methods=["GET", "POST"])
-def authorize():
+@oauthsRouter.post(path="/authorize")
+async def authorize():
     return {"StatusCode": 200}
